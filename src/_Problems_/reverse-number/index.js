@@ -16,7 +16,7 @@ function reverseNumber(num) {
 }
 
 /**
- * 
+ *
  * Given a 32-bit signed integer, reverse digits of an integer.
 
   Example 1:
@@ -32,14 +32,16 @@ function reverseNumber(num) {
   Input: 1534236469
   Output: 0 // overflows
   Note:
-  Assume we are dealing with an environment which could only 
-  store integers within the 32-bit signed integer range: [−2^31,  2^31 − 1]. 
-  For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
+  Assume we are dealing with an environment which could only
+  store integers within the 32-bit signed integer range: [−2^31,  2^31 − 1].
+  For the purpose of this problem, assume that your function returns 0 when
+  the reversed integer overflows.
  */
 
 function reverse32BitInt(x) {
   let isNegetive = 0;
   if (x < 0) {
+    // eslint-disable-next-line no-param-reassign
     x *= -1;
     isNegetive = 1;
   }
@@ -47,6 +49,7 @@ function reverse32BitInt(x) {
   while (x >= 1) {
     const r = Math.floor(x % 10);
     reverse = reverse * 10 + r;
+    // eslint-disable-next-line no-param-reassign
     x = Math.floor(x / 10);
   }
   if (reverse > 0x7fffffff) {
@@ -57,5 +60,5 @@ function reverse32BitInt(x) {
 
 module.exports = {
   reverseNumber,
-  reverse32BitInt
+  reverse32BitInt,
 };

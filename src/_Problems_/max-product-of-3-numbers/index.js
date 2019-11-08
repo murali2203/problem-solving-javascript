@@ -34,6 +34,7 @@ function maxProductof3NumbersII(arr) {
     throw new Error('Invalid Argument');
   }
 
+  // eslint-disable-next-line no-multi-assign
   let firstMax = (secondMax = thirdMax = Number.MIN_SAFE_INTEGER);
   let firstMin = (secondMin = Number.MAX_SAFE_INTEGER);
 

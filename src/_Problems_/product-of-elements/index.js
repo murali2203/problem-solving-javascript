@@ -1,4 +1,5 @@
-// An array such that each index has a product of all the numbers in the array except the number stored at that index.
+// An array such that each index has a product of all the numbers
+// in the array except the number stored at that index.
 
 /**
  * Input - [1, 2, 3, 4]
@@ -13,7 +14,8 @@ function findProduct(arr) {
   const result = [];
 
   // multiply all the numbers to the left side
-  for (let el of arr) {
+  // eslint-disable-next-line no-restricted-syntax
+  for (const el of arr) {
     result.push(left);
     left *= el;
   }
